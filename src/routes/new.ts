@@ -19,6 +19,7 @@ router.post('/api/payments',
    validateRequest,
    async (req: Request, res: Response) => {
       const { token, orderId } = req.body;
+      console.log(token, orderId);
 
       const order = await Order.findById(orderId);
 
